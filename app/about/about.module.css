@@ -2,8 +2,8 @@
 .h1 {
     margin: 0 0 15px 0;
     color: #88807B;
+    text-align: center;
     font-size: 40px;
-    /* Use the variable instead of the font name */
     font-family: var(--font-balsamiq), sans-serif;
     font-weight: 700;
 }
@@ -43,9 +43,11 @@
     margin-top: 50px;
     margin-bottom: 40px;
     border: 1px dashed #ECDCC2;
+    text-align:justify;
 }
 
 .foundersNote h2 {
   color: #7a8b40; /* The green color from your screenshot */
   margin-top: 0;
+  text-align:center;
 }

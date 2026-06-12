@@ -5,7 +5,7 @@ export default function AboutPage() {
   return (
     <div className={styles.container}>
       <Link href="/" className={styles.backButton}>← Home</Link>
-      <h1 className={style.h1}>About Us</h1>
+      <h1 className={styles.h1}>About Us</h1>
 
       <div className={styles.content}>
         <p>At Lots for Tots, our name reflects what we aim to offer — lots of meaningful experiences for little tots (toddlers). We believe in creating a space filled with engaging ideas and thoughtfully planned activities, so children always feel excited, curious, and happy to come and explore each day.</p>

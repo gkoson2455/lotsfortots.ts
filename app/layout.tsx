@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Balsamiq_Sans } from "next/font/google"; 
 import "./globals.css";
 
 const balsamiq = Balsamiq_Sans({ 
