@@ -2,8 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const langBtnStyle = {
-  background: 'linear-gradient(90deg, #729b2a 0%, #a0c757 50%, #d1c984 100%)',
-  color: '#444',
+   background: 'linear-gradient(83deg,rgba(212, 176, 255, 1) 0%, rgba(255, 179, 232, 1) 51%, rgba(255, 140, 156, 1) 100%)',
   padding: '8px 16px',
   borderRadius: '50px',
   fontSize: '13px',
