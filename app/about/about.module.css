@@ -1,0 +1,37 @@
+/* app/about/about.module.css */
+.container {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+.backButton {
+  padding: 10px 20px;
+  background-color: #fde4e4;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #d1984;
+  font-weight: bold;
+}
+.title {
+  text-align: center;
+  font-size: 48px;
+  margin: 40px 0;
+}
+.content {
+  line-height: 1.6;
+  color: #333;
+}
+/* Add this to app/about/about.module.css */
+.foundersNote {
+  background-color: #fdfaf0; /* Light cream background */
+  border: 1px dashed #d1c0a8; /* Light border */
+  border-radius: 15px;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+.foundersNote h2 {
+  color: #7a8b40; /* The green color from your screenshot */
+  margin-top: 0;
+}
