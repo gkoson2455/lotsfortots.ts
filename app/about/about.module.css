@@ -3,7 +3,8 @@
     margin: 0 0 15px 0;
     color: #88807B;
     font-size: 40px;
-    font-family: 'Balsamiq Sans', cursive;
+    /* Use the variable instead of the font name */
+    font-family: var(--font-balsamiq), sans-serif;
     font-weight: 700;
 }
 .container {
