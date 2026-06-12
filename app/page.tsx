@@ -1,65 +1,62 @@
 import Image from "next/image";
+import Link from "next/link";
+
+const langBtnStyle = {
+  background: 'linear-gradient(90deg, #729b2a 0%, #a0c757 50%, #d1c984 100%)',
+  color: '#444',
+  padding: '8px 16px',
+  borderRadius: '50px',
+  fontSize: '13px',
+  fontWeight: 'bold',
+  textDecoration: 'none'
+};
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <nav style={{ position: 'fixed', top: '20px', left: '20px', display: 'flex', gap: '10px', zIndex: 100 }}>
+        <Link href="/en" style={langBtnStyle}>English</Link>
+        <Link href="/zh" style={langBtnStyle}>中文</Link>
+      </nav>
+
+      <header style={{ display: 'flex', justifyContent: 'center' }}>
+        <Link href="/" style={{ display: 'inline-block', lineHeight: 0 }}>
+          <img src="/LFT.gif" alt="Lots For Tots Logo" width={300} height={200} style={{ marginTop: '0px' }} />
+        </Link>
+      </header>
+
+      <main style={{ marginTop: '0px', marginBottom: '30px', padding: '0 20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <h1 style={{ fontFamily: "'Balsamiq Sans', cursive", fontSize: '40px', fontWeight: 700, color: '#88807B', margin: '0 0 15px 0' }}>
+          Lots For Tots 乐多探索坊
+        </h1>
+        <h2 style={{ fontFamily: "'Balsamiq Sans', cursive", fontSize: '20px', fontWeight: 700, color: '#88807B', margin: '0 0 15px 0' }}>
+          The kiddies&apos; way of learning
+        </h2>
+
+        <nav style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', width: '100%', maxWidth: '900px', marginTop: '20px' }}>
+          <Link href="/about" className="main-btn">About Us</Link>
+          <Link href="/contact" className="main-btn">Contact Us</Link>
+          <Link href="/policy" className="main-btn">House Rules/Policy</Link>
+          <Link href="/enquire" className="main-btn">Enquire Now!</Link>
+          <Link href="/calendar" className="main-btn" style={{ gridColumn: '1' }}>Academic Calendar</Link>
+        </nav>
       </main>
-    </div>
+
+      <footer style={{ width: '100%', backgroundColor: '#fff7ed', borderTop: '1px solid #ddd', textAlign: 'center', fontSize: '14px', color: '#666', marginTop: 'auto', padding: '10px 0' }}>
+        <div style={{ margin: '10px auto', maxWidth: '600px', width: '90%' }}>
+          <p style={{ margin: 0, fontWeight: 'bold' }}>📍 Our Location:</p>
+          <p style={{ margin: '8px 0', color: '#555', background: '#fdf2e4', border: '1px solid #ecdcc2', borderRadius: '12px', padding: '12px 16px', fontSize: '16px' }}>
+            11A-1, Jalan Astaka 4A/KU2, Bandar Bukit Raja, 41050 Klang
+          </p>
+          <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', marginTop: '10px' }}>
+            <a href="https://www.google.com/maps/search/?api=1&query=11A-1,+Jalan+Astaka+4A/KU2,+Bandar+Bukit+Raja,+41050+Klang"
+              target="_blank" className="nav-btn google-btn">Google Maps</a>
+            <a href="https://waze.com/ul?q=11A-1,+Jalan+Astaka+4A/KU2,+Bandar+Bukit+Raja,+41050+Klang"
+              target="_blank" className="nav-btn waze-btn">Waze</a>
+          </div>
+        </div>
+        <p style={{ margin: '5px 0 0 0' }}>© 2026 Lots For Tots. All Rights Reserved.</p>
+      </footer>
+    </>
   );
 }
