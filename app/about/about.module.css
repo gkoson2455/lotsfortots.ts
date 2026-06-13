@@ -1,16 +1,14 @@
-/* app/about/about.module.css */
-
 .aboutContainer {
     background-color: #fff7ed;
     min-height: 100dvh;
-    padding: 20px; /* Adjust as needed */
-    animation: fadeIn 0.4s ease;
-    position: relative; 
+    padding: 20px;
+    position: relative;
+    /* Remove animation from here */
 }
 
 .aboutContainer::before {
     content: '';
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -22,6 +20,19 @@
     filter: blur(10px);
     opacity: 0.15;
     z-index: -1;
+    /* No animation here either */
+}
+
+/* Animate the content wrapper instead */
+.content {
+    margin-top: 40px;
+    padding: 0 25px;
+    text-align: justify;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 1;
+    animation: fadeIn 0.4s ease; /* Move animation here */
 }
 
 @keyframes fadeIn {
@@ -64,16 +75,7 @@
   font-size: 48px;
   margin: 40px 0;
 }
-.content {
-  margin-top: 40px;
-    padding: 0 25px;
-    text-align: justify;
-    max-width: 850px;
-    margin-left: auto;
-    margin-right: auto;
-    flex: 1; 
-}
-/* Add this to app/about/about.module.css */
+
 .foundersNote {
    background-color: #fdf2e4;
     padding: 30px;
