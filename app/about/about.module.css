@@ -90,3 +90,11 @@
   margin-top: 0;
   text-align:center;
 }
+
+@media (max-width: 600px) {
+    .about-section p, .content p {
+        text-align: left;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
