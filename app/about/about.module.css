@@ -1,3 +1,5 @@
+/* app/about/about.module.css */
+
 .aboutContainer {
     background-color: #fff7ed;
     min-height: 100dvh;
@@ -22,7 +24,33 @@
     z-index: -1;
 }
 
-/* Animate the content wrapper instead */
+.backButton {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: linear-gradient(83deg, rgba(212, 176, 255, 1) 0%, rgba(255, 179, 232, 1) 51%, rgba(255, 140, 156, 1) 100%);
+    color: white;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+}
+
+.title {
+    text-align: center;
+    font-size: 48px;
+    color: #88807B;
+    font-family: var(--font-balsamiq), cursive;
+    font-weight: 700;
+    margin: 40px 0 15px 0;
+    animation: fadeIn 0.4s ease;
+}
+
 .content {
     margin-top: 40px;
     padding: 0 25px;
@@ -31,70 +59,40 @@
     margin-left: auto;
     margin-right: auto;
     flex: 1;
-    animation: fadeIn 0.4s ease; /* Move animation here */
+    animation: fadeIn 0.4s ease;
+}
+
+.foundersNote {
+    background-color: #fdf2e4;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    border: 1px dashed #ECDCC2;
+    text-align: justify;
+}
+
+.foundersNote h2 {
+    color: #729b2a;
+    margin-top: 0;
+    text-align: center;
+    font-family: var(--font-balsamiq), cursive;
 }
 
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-.h1 {
-    margin: 0 0 15px 0;
-    color: #88807B;
-    text-align: center;
-    font-size: 40px;
-   font-family: var(--font-balsamiq), cursive;
-    font-weight: 700;
-}
-.container {
-  padding: 40px;
-  max-width: 800px;
-  margin: 0 auto;
-  font-family: sans-serif;
-}
-.backButton {
-  position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 9999;
-    pointer-events: auto;
-    display: inline-block;
-    text-decoration: none;
-    padding: 10px 20px;
-    background: linear-gradient(83deg,rgba(212, 176, 255, 1) 0%, rgba(255, 179, 232, 1) 51%, rgba(255, 140, 156, 1) 100%);
-    color: white;
-    border-radius: 50px;
-    font-size: 14px;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s ease;
-}
-.title {
-  text-align: center;
-  font-size: 48px;
-  margin: 40px 0;
-}
-
-.foundersNote {
-   background-color: #fdf2e4;
-    padding: 30px;
-    border-radius: 20px;
-    margin-top: 50px;
-    margin-bottom: 40px;
-    border: 1px dashed #ECDCC2;
-    text-align:justify;
-}
-
-.foundersNote h2 {
-  color: #7a8b40; /* The green color from your screenshot */
-  margin-top: 0;
-  text-align:center;
-}
 
 @media (max-width: 600px) {
-    .about-section p, .content p {
+    .title {
+        font-size: 32px;
+    }
+
+    .content {
         text-align: left;
         font-size: 14px;
         line-height: 1.6;
+        padding: 0 15px;
     }
 }
