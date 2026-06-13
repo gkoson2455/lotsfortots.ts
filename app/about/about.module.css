@@ -3,7 +3,7 @@
     min-height: 100dvh;
     padding: 20px;
     position: relative;
-    /* Remove animation from here */
+    isolation: isolate;
 }
 
 .aboutContainer::before {
@@ -20,7 +20,6 @@
     filter: blur(10px);
     opacity: 0.15;
     z-index: -1;
-    /* No animation here either */
 }
 
 /* Animate the content wrapper instead */
