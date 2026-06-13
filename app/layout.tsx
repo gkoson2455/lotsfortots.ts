@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Balsamiq_Sans } from "next/font/google"; 
+import { Balsamiq_Sans } from "next/font/google";
 import "./globals.css";
 
-const balsamiq = Balsamiq_Sans({ 
+const balsamiq = Balsamiq_Sans({
   subsets: ["latin"],
-  weight: ["700"], // Regular and Bold weights
+  weight: ["400", "700"],
+  variable: "--font-balsamiq",
 });
 
 export const metadata: Metadata = {
@@ -18,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="relative">
+    <html lang="en" className={balsamiq.variable}>
+      <body>
         {children}
       </body>
     </html>
