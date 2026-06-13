@@ -3,6 +3,7 @@ import styles from './about.module.css';
 
 export default function AboutPage() {
   return (
+    <div className={styles.aboutContainer}>
     <div className={styles.container}>
       <Link href="/" className={styles.backButton}>← Home</Link>
       <h1 className={styles.h1}>About Us</h1>
@@ -25,6 +26,7 @@ export default function AboutPage() {
         <p>This is what led me to create Lots for Tots — a space where young children are not only cared for, but thoughtfully guided through meaningful play, positive interactions, and gentle structure.</p>
         <p>My goal is simple: to provide children with a strong and positive foundation, so they grow up with the confidence to explore, the ability to adapt, and the readiness to make good choices as they continue their journey. Because every child deserves a good start — and sometimes, that start makes all the difference.</p>
       </section>
+    </div>
     </div>
   );
 }
