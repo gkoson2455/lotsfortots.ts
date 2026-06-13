@@ -4,11 +4,9 @@ import styles from './about.module.css';
 export default function AboutPage() {
   return (
     <div className={styles.aboutContainer}>
-      <Link href="/" className={styles.backButton}>← Home</Link>
-      
-      <h1 className={styles.title}>About Us</h1>
-
-      <div className={styles.content}>
+  <Link href="/" className={styles.backButton}>← Home</Link>
+  <h1 className={styles.title}>About Us</h1>
+  <div className={styles.content}>
         <p>At Lots for Tots, our name reflects what we aim to offer — lots of meaningful experiences for little tots (toddlers). We believe in creating a space filled with engaging ideas and thoughtfully planned activities, so children always feel excited, curious, and happy to come and explore each day.</p>
         <p>Guided by our philosophy, &ldquo;the kiddies&apos; way of learning,&rdquo; we recognise that every child learns best through play, exploration, and hands-on experiences — with the right balance of gentle guidance and structure.</p>
         <p>Our program is designed to support toddlers aged 1–3 in their journey towards preschool, helping them transition with confidence and ease. Through consistent routines and guided activities, children gradually build independence, responsibility, and the ability to adapt to a group environment.</p>
